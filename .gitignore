@@ -100,3 +100,6 @@ prefs.plist
 
 # Desktop Services Store
 .DS_Store
+
+# Miscellaneous
+CONTRIBUTE.md
