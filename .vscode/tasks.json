@@ -1,0 +1,26 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Xcode Project",
+			"type": "shell",
+            "command": "xcodebuild",
+            "args": [
+                "-project",
+                "ytsearch.xcodeproj",
+                "-scheme",
+                "ytsearch",
+                "-configuration",
+                "Debug"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        }
+    ]
+}
