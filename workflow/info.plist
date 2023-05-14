@@ -8,6 +8,19 @@
 	<string>Internet</string>
 	<key>connections</key>
 	<dict>
+		<key>23881008-ABCE-4E07-84B3-40CBD5F5F810</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>4BA3ADC5-1A29-4031-837C-44A6CBE6FE85</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>4EED8CAA-4F68-4044-BFC9-E02BE0A95F5C</key>
 		<array>
 			<dict>
@@ -35,6 +48,27 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>skipqueryencode</key>
+				<false/>
+				<key>skipvarencode</key>
+				<false/>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>1957D7D1-3444-4967-BD3C-59EFE0924B1C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -46,9 +80,9 @@
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>escaping</key>
-				<integer>0</integer>
+				<integer>102</integer>
 				<key>keyword</key>
-				<string>{var:youtube_keyword}</string>
+				<string>{var:video_search_keyword}</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -60,7 +94,7 @@
 				<key>runningsubtext</key>
 				<string>Fetching results...</string>
 				<key>script</key>
-				<string></string>
+				<string>./ytsearch video "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -68,9 +102,9 @@
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
-				<string>YouTube Search</string>
+				<string>YouTube Video Search</string>
 				<key>type</key>
-				<integer>8</integer>
+				<integer>5</integer>
 				<key>withspace</key>
 				<true/>
 			</dict>
@@ -78,6 +112,55 @@
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>4EED8CAA-4F68-4044-BFC9-E02BE0A95F5C</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>{var:channel_search_keyword}</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>1</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Fetching results...</string>
+				<key>script</key>
+				<string>./ytsearch channel "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>YouTube.swift</string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>YouTube Channel Search</string>
+				<key>type</key>
+				<integer>5</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>23881008-ABCE-4E07-84B3-40CBD5F5F810</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
@@ -98,7 +181,7 @@
 			<key>type</key>
 			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
-			<string>1957D7D1-3444-4967-BD3C-59EFE0924B1C</string>
+			<string>4BA3ADC5-1A29-4031-837C-44A6CBE6FE85</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -110,9 +193,15 @@ The workflow requires an API key, which can be requested and set up by following
 
 # Usage
 
-Search YouTube via the `yt` keyword.
+Search YouTube videos via the `yt` keyword.
 
-![demo](images/about/demo.png)</string>
+![demo-1](images/about/demo-1.png)
+
+Search YouTube channels via the `ytc` keyword.
+
+![demo-1](images/about/demo-2.png)
+
+When displaying channels, select one of them and use the ⌘ modifier key to show its description.</string>
 	<key>uidata</key>
 	<dict>
 		<key>1957D7D1-3444-4967-BD3C-59EFE0924B1C</key>
@@ -121,6 +210,20 @@ Search YouTube via the `yt` keyword.
 			<real>215</real>
 			<key>ypos</key>
 			<real>25</real>
+		</dict>
+		<key>23881008-ABCE-4E07-84B3-40CBD5F5F810</key>
+		<dict>
+			<key>xpos</key>
+			<real>30</real>
+			<key>ypos</key>
+			<real>170</real>
+		</dict>
+		<key>4BA3ADC5-1A29-4031-837C-44A6CBE6FE85</key>
+		<dict>
+			<key>xpos</key>
+			<real>215</real>
+			<key>ypos</key>
+			<real>170</real>
 		</dict>
 		<key>4EED8CAA-4F68-4044-BFC9-E02BE0A95F5C</key>
 		<dict>
@@ -147,11 +250,32 @@ Search YouTube via the `yt` keyword.
 			<key>description</key>
 			<string></string>
 			<key>label</key>
-			<string>Search Keyword</string>
+			<string>Video Search Keyword</string>
 			<key>type</key>
 			<string>textfield</string>
 			<key>variable</key>
-			<string>youtube_keyword</string>
+			<string>video_search_keyword</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>ytc</string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string></string>
+			<key>label</key>
+			<string>Channel Search Keyword</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>channel_search_keyword</string>
 		</dict>
 		<dict>
 			<key>config</key>
