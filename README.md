@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <img src="src/images/about/demo.png">
+  <img src="workflow/images/about/demo-1.png">
 </p>
 
 Search YouTube from [Alfred][1].
@@ -22,7 +22,10 @@ the steps 1-3 that you can find [here][2].
 
 ## Usage
 
-Search YouTube via the `yt` keyword.
+Search YouTube videos via the `yt` keyword and YouTube channels via the `ytc` keyword.
+
+When displaying channels, select one of them and use the `⌘` modifier key to
+show its description.
 
 ## Contribute
 
