@@ -24,7 +24,6 @@ hoistPatternLet,                  \
 indent,                           \
 leadingDelimiters,                \
 linebreakAtEndOfFile,             \
-markTypes,                        \
 organizeDeclarations,             \
 redundantInit,                    \
 redundantParens,                  \
@@ -56,13 +55,11 @@ wrap,                             \
 wrapArguments,                    \
 wrapAttributes,                   \
 #
-#
 # Additional rules not mentioned in the guideline, but helping to keep the codebase clean 
 # Quoting the guideline: 
 # Common themes among the rules in this section are: 
 # avoid redundancy, avoid ambiguity, and prefer implicitness over explicitness unless being
 # explicit improves readability and/or reduces ambiguity.
-#
 #
 andOperator,                      \
 isEmpty,                          \
@@ -89,7 +86,7 @@ strongifiedSelf
 --wrapparameters before-first
 --wrapcollections before-first
 --wrapreturntype if-multiline
---wrapconditions after-first 
+--wrapconditions after-first
 
 # Option for additional rules
 
