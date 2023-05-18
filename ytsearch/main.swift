@@ -4,13 +4,14 @@ import Foundation
 func main() {
   // Check if the command line arguments have the required count.
   guard CommandLine.arguments.count == 3 else {
-    fputs("usage: ytsearch <video | channel> <query>", stderr)
+    fputs("usage: ytsearch <video | channel | playlist> <query>", stderr)
     exit(1)
   }
 
   // Validate search type as positional argument.
-  guard CommandLine.arguments[1] == "video" || CommandLine.arguments[1] == "channel" else {
-    fputs("usage: ytsearch <video | channel> <query>", stderr)
+  guard CommandLine.arguments[1] == "video" || CommandLine.arguments[1] == "channel" || CommandLine
+    .arguments[1] == "playlist" else {
+    fputs("usage: ytsearch <video | channel | playlist> <query>", stderr)
     exit(1)
   }
 
@@ -42,7 +43,8 @@ func main() {
 
   // Set response handler based on search type.
   let handleResponse = searchType == "video" ? handleVideoResponse(apiKey: apiKey) :
-    handleChannelResponse(apiKey: apiKey)
+    searchType == "channel" ? handleChannelResponse(apiKey: apiKey) :
+    handlePlaylistResponse(apiKey: apiKey)
 
   // Make an HTTP request to the YouTube API and process the response.
   let task: URLSessionDataTask = URLSession.shared.dataTask(
