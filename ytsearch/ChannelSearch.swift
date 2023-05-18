@@ -79,13 +79,14 @@ func parseChannelStatisticsJSON(_ json: [String: Any]) -> [String: ChannelStats]
 
 // MARK: - Alfred Feedback Generation
 
-/// Combines the results of `parseChannelSnippetJSON` and `parseChannelStatisticsJSON` to create an
-/// array of dictionaries in Alfred's feedback format.
+/// Combines the results of `parseChannelSnippetJSON` and `parseChannelStatisticsJSON` into a
+/// dictionary formatted according to Alfred's feedback format.
 ///
 /// - Parameters:
-/// - items: An array of dictionaries in the format returned by `parseVideoSnippetJSON`.
+/// - items: An array of dictionaries in the format returned by `parseChannelSnippetJSON`.
 /// - channelStats: A dictionary with video IDs as keys and `ChannelStats` instances containing the
-///   subscriber count, view count, and video count as values returned by `parseVideoStatisticsJSON`.
+///   subscriber count, view count, and video count as values returned by
+///   `parseChannelStatisticsJSON`.
 /// - Returns: A dictionary containing an `items` key with an array of dictionaries in the format
 ///   expected by Alfred.
 func createAlfredChannelItems(
@@ -124,8 +125,8 @@ func createAlfredChannelItems(
 
 // MARK: - Response Handling
 
-/// Handles the response from the YouTube API's search endpoint and prints the resulting Alfred
-/// feedback.
+/// Handles the response from the YouTube API's search endpoint, sends a request to the channels
+/// endpoint, and prints the resulting Alfred feedback.
 ///
 /// - Parameter apiKey: The YouTube API key used to authenticate the request.
 /// - Returns: A closure that takes `Data?`, `URLResponse?`, and `Error?` as arguments.

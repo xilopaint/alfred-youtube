@@ -65,8 +65,8 @@ func parseVideoStatisticsJSON(_ json: [String: Any]) -> [String: Int] {
 
 // MARK: - Alfred Feedback Generation
 
-/// Combines the results of `parseVideoSnippetJSON` and `parseVideoStatisticsJSON` to create an
-/// array of dictionaries in Alfred's feedback format.
+/// Combines the results of `parseVideoSnippetJSON` and `parseVideoStatisticsJSON` into a
+/// dictionary formatted according to Alfred's feedback format.
 ///
 /// - Parameters:
 /// - items: An array of dictionaries in the format returned by `parseVideoSnippetJSON`.
