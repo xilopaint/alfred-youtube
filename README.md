@@ -22,7 +22,8 @@ the steps 1-3 that you can find [here][2].
 
 ## Usage
 
-Search YouTube videos via the `yt` keyword and YouTube channels via the `ytc` keyword.
+Search videos via the `yt` keyword, channels via the `ytc` keyword, and
+playlists via the `ytp` keyword.
 
 When displaying channels, select one of them and use the `⌘` modifier key to
 show its description.
