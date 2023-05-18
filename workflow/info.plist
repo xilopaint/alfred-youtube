@@ -8,11 +8,11 @@
 	<string>Internet</string>
 	<key>connections</key>
 	<dict>
-		<key>1957D7D1-3444-4967-BD3C-59EFE0924B1C</key>
+		<key>16094B46-C66E-4E56-8EA2-35C146C1E1EE</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>FA51DB74-FBD1-4FD7-8357-C186CA92C630</string>
+				<string>4BA3ADC5-1A29-4031-837C-44A6CBE6FE85</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -51,7 +51,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>1957D7D1-3444-4967-BD3C-59EFE0924B1C</string>
+				<string>4BA3ADC5-1A29-4031-837C-44A6CBE6FE85</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -71,27 +71,6 @@
 	<string>YouTube Search</string>
 	<key>objects</key>
 	<array>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>skipqueryencode</key>
-				<false/>
-				<key>skipvarencode</key>
-				<false/>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string></string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>1957D7D1-3444-4967-BD3C-59EFE0924B1C</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -138,6 +117,76 @@
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>4EED8CAA-4F68-4044-BFC9-E02BE0A95F5C</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>skipqueryencode</key>
+				<false/>
+				<key>skipvarencode</key>
+				<false/>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>4BA3ADC5-1A29-4031-837C-44A6CBE6FE85</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>{var:channel_search_keyword}</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>1</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Fetching results...</string>
+				<key>script</key>
+				<string>./ytsearch channel "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>YouTube.swift</string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>YouTube Channel Search</string>
+				<key>type</key>
+				<integer>5</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>23881008-ABCE-4E07-84B3-40CBD5F5F810</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
@@ -254,7 +303,7 @@ fi</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>{var:channel_search_keyword}</string>
+				<string>{var:playlist_search_keyword}</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -266,7 +315,7 @@ fi</string>
 				<key>runningsubtext</key>
 				<string>Fetching results...</string>
 				<key>script</key>
-				<string>./ytsearch channel "$1"</string>
+				<string>./ytsearch playlist "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -274,7 +323,7 @@ fi</string>
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
-				<string>YouTube Channel Search</string>
+				<string>YouTube Playlist Search</string>
 				<key>type</key>
 				<integer>5</integer>
 				<key>withspace</key>
@@ -283,30 +332,9 @@ fi</string>
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>23881008-ABCE-4E07-84B3-40CBD5F5F810</string>
+			<string>16094B46-C66E-4E56-8EA2-35C146C1E1EE</string>
 			<key>version</key>
 			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>skipqueryencode</key>
-				<false/>
-				<key>skipvarencode</key>
-				<false/>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string></string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>4BA3ADC5-1A29-4031-837C-44A6CBE6FE85</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -316,23 +344,27 @@ The workflow requires an API key, which can be requested and set up by following
 
 # Usage
 
-Search YouTube videos via the `yt` keyword.
+Search videos via the `yt` keyword:
 
 ![demo-1](images/about/demo-1.png)
 
-Search YouTube channels via the `ytc` keyword.
+Search channels via the `ytc` keyword:
 
 ![demo-1](images/about/demo-2.png)
 
-When displaying channels, select one of them and use the ⌘ modifier key to show its description.</string>
+When displaying channels, select one of them and use the ⌘ modifier key to show its description.
+
+Search playlists via the `ytp` keyword:
+
+![demo-1](images/about/demo-3.png)</string>
 	<key>uidata</key>
 	<dict>
-		<key>1957D7D1-3444-4967-BD3C-59EFE0924B1C</key>
+		<key>16094B46-C66E-4E56-8EA2-35C146C1E1EE</key>
 		<dict>
 			<key>xpos</key>
-			<real>215</real>
+			<real>30</real>
 			<key>ypos</key>
-			<real>25</real>
+			<real>315</real>
 		</dict>
 		<key>23881008-ABCE-4E07-84B3-40CBD5F5F810</key>
 		<dict>
@@ -344,7 +376,7 @@ When displaying channels, select one of them and use the ⌘ modifier key to sho
 		<key>4BA3ADC5-1A29-4031-837C-44A6CBE6FE85</key>
 		<dict>
 			<key>xpos</key>
-			<real>215</real>
+			<real>235</real>
 			<key>ypos</key>
 			<real>170</real>
 		</dict>
@@ -362,9 +394,9 @@ When displaying channels, select one of them and use the ⌘ modifier key to sho
 			<key>note</key>
 			<string>OneUpdater</string>
 			<key>xpos</key>
-			<real>405</real>
+			<real>425</real>
 			<key>ypos</key>
-			<real>95</real>
+			<real>170</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
@@ -410,6 +442,27 @@ When displaying channels, select one of them and use the ⌘ modifier key to sho
 			<string>textfield</string>
 			<key>variable</key>
 			<string>channel_search_keyword</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>ytp</string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string></string>
+			<key>label</key>
+			<string>Playlist Search Keyword</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>playlist_search_keyword</string>
 		</dict>
 		<dict>
 			<key>config</key>

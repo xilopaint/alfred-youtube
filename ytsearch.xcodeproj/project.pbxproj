@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8E3913692A06EFF80093F23F /* ChannelSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3913682A06EFF80093F23F /* ChannelSearch.swift */; };
+		8EA71AC22A160C3000804904 /* PlaylistSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA71AC12A160C3000804904 /* PlaylistSearch.swift */; };
 		8EC4AC7129FFF301005B5DAE /* VideoSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC4AC6E29FFF301005B5DAE /* VideoSearch.swift */; };
 		8EC4AC7229FFF301005B5DAE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC4AC6F29FFF301005B5DAE /* main.swift */; };
 		8EC4AC7329FFF301005B5DAE /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC4AC7029FFF301005B5DAE /* Utils.swift */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		8E3913682A06EFF80093F23F /* ChannelSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelSearch.swift; sourceTree = "<group>"; };
+		8EA71AC12A160C3000804904 /* PlaylistSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistSearch.swift; sourceTree = "<group>"; };
 		8EC4AC4F29FF7FB5005B5DAE /* ytsearch */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ytsearch; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EC4AC6E29FFF301005B5DAE /* VideoSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoSearch.swift; sourceTree = "<group>"; };
 		8EC4AC6F29FFF301005B5DAE /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				8E3913682A06EFF80093F23F /* ChannelSearch.swift */,
 				8EC4AC6F29FFF301005B5DAE /* main.swift */,
 				8EC4AC7029FFF301005B5DAE /* Utils.swift */,
+				8EA71AC12A160C3000804904 /* PlaylistSearch.swift */,
 				8EC4AC6E29FFF301005B5DAE /* VideoSearch.swift */,
 			);
 			path = ytsearch;
@@ -131,6 +134,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EC4AC7229FFF301005B5DAE /* main.swift in Sources */,
+				8EA71AC22A160C3000804904 /* PlaylistSearch.swift in Sources */,
 				8E3913692A06EFF80093F23F /* ChannelSearch.swift in Sources */,
 				8EC4AC7129FFF301005B5DAE /* VideoSearch.swift in Sources */,
 				8EC4AC7329FFF301005B5DAE /* Utils.swift in Sources */,
