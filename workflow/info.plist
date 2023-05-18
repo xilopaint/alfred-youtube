@@ -346,17 +346,17 @@ The workflow requires an API key, which can be requested and set up by following
 
 Search videos via the `yt` keyword:
 
-![demo-1](images/about/demo-1.png)
+![video search](images/about/demo-1.png)
 
 Search channels via the `ytc` keyword:
 
-![demo-1](images/about/demo-2.png)
+![channel search](images/about/demo-2.png)
 
 When displaying channels, select one of them and use the ⌘ modifier key to show its description.
 
 Search playlists via the `ytp` keyword:
 
-![demo-1](images/about/demo-3.png)</string>
+![playlist search](images/about/demo-3.png)</string>
 	<key>uidata</key>
 	<dict>
 		<key>16094B46-C66E-4E56-8EA2-35C146C1E1EE</key>
@@ -542,7 +542,7 @@ Search playlists via the `ytp` keyword:
 		</dict>
 	</array>
 	<key>version</key>
-	<string>0.2.0</string>
+	<string>0.3.0</string>
 	<key>webaddress</key>
 	<string>https://www.github.com/xilopaint/alfred-youtube</string>
 </dict>
