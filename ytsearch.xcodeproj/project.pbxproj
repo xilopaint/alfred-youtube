@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8E3913692A06EFF80093F23F /* ChannelSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3913682A06EFF80093F23F /* ChannelSearch.swift */; };
+		8E9CF86A2A51E6CD003CA48B /* LiveBroadcastSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9CF8692A51E6CD003CA48B /* LiveBroadcastSearch.swift */; };
 		8EA71AC22A160C3000804904 /* PlaylistSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA71AC12A160C3000804904 /* PlaylistSearch.swift */; };
 		8EC4AC7129FFF301005B5DAE /* VideoSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC4AC6E29FFF301005B5DAE /* VideoSearch.swift */; };
 		8EC4AC7229FFF301005B5DAE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC4AC6F29FFF301005B5DAE /* main.swift */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		8E3913682A06EFF80093F23F /* ChannelSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelSearch.swift; sourceTree = "<group>"; };
+		8E9CF8692A51E6CD003CA48B /* LiveBroadcastSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveBroadcastSearch.swift; sourceTree = "<group>"; };
 		8EA71AC12A160C3000804904 /* PlaylistSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistSearch.swift; sourceTree = "<group>"; };
 		8EC4AC4F29FF7FB5005B5DAE /* ytsearch */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ytsearch; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EC4AC6E29FFF301005B5DAE /* VideoSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoSearch.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 			children = (
 				8E3913682A06EFF80093F23F /* ChannelSearch.swift */,
 				8EC4AC6F29FFF301005B5DAE /* main.swift */,
+				8E9CF8692A51E6CD003CA48B /* LiveBroadcastSearch.swift */,
 				8EC4AC7029FFF301005B5DAE /* Utils.swift */,
 				8EA71AC12A160C3000804904 /* PlaylistSearch.swift */,
 				8EC4AC6E29FFF301005B5DAE /* VideoSearch.swift */,
@@ -138,6 +141,7 @@
 				8E3913692A06EFF80093F23F /* ChannelSearch.swift in Sources */,
 				8EC4AC7129FFF301005B5DAE /* VideoSearch.swift in Sources */,
 				8EC4AC7329FFF301005B5DAE /* Utils.swift in Sources */,
+				8E9CF86A2A51E6CD003CA48B /* LiveBroadcastSearch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

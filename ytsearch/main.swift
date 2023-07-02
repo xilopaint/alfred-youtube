@@ -4,14 +4,13 @@ import Foundation
 func main() {
   // Check if the command line arguments have the required count.
   guard CommandLine.arguments.count == 3 else {
-    fputs("usage: ytsearch <video | channel | playlist> <query>", stderr)
+    fputs("usage: ytsearch <video | channel | playlist | live> <query>", stderr)
     exit(1)
   }
 
   // Validate search type as positional argument.
-  guard CommandLine.arguments[1] == "video" || CommandLine.arguments[1] == "channel" || CommandLine
-    .arguments[1] == "playlist" else {
-    fputs("usage: ytsearch <video | channel | playlist> <query>", stderr)
+  guard ["video", "channel", "playlist", "live"].contains(CommandLine.arguments[1]) else {
+    fputs("usage: ytsearch <video | channel | playlist | live> <query>", stderr)
     exit(1)
   }
 
@@ -24,16 +23,24 @@ func main() {
   let maxResults: String = ProcessInfo.processInfo.environment["max_results"]!
   let order: String = ProcessInfo.processInfo.environment["order"]!
 
-  // Define YouTube API endpoint and query parameters.
+  // Define YouTube API endpoint
   let endpoint = "https://www.googleapis.com/youtube/v3/search"
-  let queryParams: [String: String] = [
+
+  // Define query parameters.
+  var queryParams: [String: String] = [
     "part": "snippet",
     "maxResults": maxResults,
     "order": order,
     "q": searchQuery,
     "type": searchType,
     "key": apiKey,
+    "safeSearch": "none"
   ]
+
+  if searchType == "live" {
+    queryParams["type"] = "video"
+    queryParams["eventType"] = "live"
+  }
 
   // Build the YouTube API request URL.
   guard let url: URL = buildURL(with: endpoint, using: queryParams) else {
@@ -42,9 +49,19 @@ func main() {
   }
 
   // Set response handler based on search type.
-  let handleResponse = searchType == "video" ? handleVideoResponse(apiKey: apiKey) :
-    searchType == "channel" ? handleChannelResponse(apiKey: apiKey) :
-    handlePlaylistResponse(apiKey: apiKey)
+  let handleResponse: (Data?, URLResponse?, Error?) -> Void
+  switch searchType {
+  case "video":
+    handleResponse = handleVideoResponse(apiKey: apiKey)
+  case "channel":
+    handleResponse = handleChannelResponse(apiKey: apiKey)
+  case "playlist":
+    handleResponse = handlePlaylistResponse(apiKey: apiKey)
+  case "live":
+    handleResponse = handleLiveBroadcastResponse(apiKey: apiKey)
+  default:
+    fatalError("Invalid search type.")
+  }
 
   // Make an HTTP request to the YouTube API and process the response.
   let task: URLSessionDataTask = URLSession.shared.dataTask(

@@ -22,8 +22,8 @@ the steps 1-3 that you can find [here][2].
 
 ## Usage
 
-Search videos via the `yt` keyword, channels via the `ytc` keyword, and
-playlists via the `ytp` keyword.
+Search videos via the `yt` keyword, channels via the `ytc` keyword, playlists
+via the `ytp` keyword, and live broadcasts via the `ytl` keyword.
 
 When displaying channels, select one of them and use the `⌘` modifier key to
 show its description.
