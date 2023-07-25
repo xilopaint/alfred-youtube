@@ -122,7 +122,7 @@
 				<key>title</key>
 				<string>Search Videos</string>
 				<key>type</key>
-				<integer>5</integer>
+				<integer>11</integer>
 				<key>withspace</key>
 				<true/>
 			</dict>
@@ -171,7 +171,7 @@
 				<key>title</key>
 				<string>Search Channels</string>
 				<key>type</key>
-				<integer>5</integer>
+				<integer>11</integer>
 				<key>withspace</key>
 				<true/>
 			</dict>
@@ -338,7 +338,7 @@ fi</string>
 				<key>title</key>
 				<string>Search Playlists</string>
 				<key>type</key>
-				<integer>5</integer>
+				<integer>11</integer>
 				<key>withspace</key>
 				<true/>
 			</dict>
@@ -387,7 +387,7 @@ fi</string>
 				<key>title</key>
 				<string>Search Live Broadcasts</string>
 				<key>type</key>
-				<integer>5</integer>
+				<integer>11</integer>
 				<key>withspace</key>
 				<true/>
 			</dict>
